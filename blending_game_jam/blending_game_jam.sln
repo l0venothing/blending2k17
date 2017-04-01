@@ -1,12 +1,8 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-<<<<<<< HEAD
 # Visual Studio 15
 VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
-=======
-# Visual Studio 2015
->>>>>>> develop
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blending_game_jam", "blending_game_jam.csproj", "{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}"
 EndProject
 Global
