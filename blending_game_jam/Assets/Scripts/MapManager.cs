@@ -18,13 +18,12 @@ public class MapManager : MonoBehaviour {
 
 	}
 
-    void NewRoom(Vector3 position, List<int> doors, int length){
+    void NewRoom(Vector3 position, List<int> doors, int length, GameObject origin=null){
         GameObject room = Instantiate(Resources.Load("room")) as GameObject;
         room.transform.localPosition = position;
         GenerateRoom generate = room.GetComponent<GenerateRoom>();
         generate.length = length;
         generate.doors = doors;
-
         generate.Initialize();
     }
 }

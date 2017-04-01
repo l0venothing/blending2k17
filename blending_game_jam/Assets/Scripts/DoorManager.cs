@@ -6,6 +6,7 @@ public class DoorManager : MonoBehaviour {
 
     public GameObject parent;
     public GameObject destination;
+
 	// Use this for initialization
 	void Start () {
 
