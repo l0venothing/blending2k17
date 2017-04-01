@@ -7,7 +7,7 @@ public class FightManager : MonoBehaviour {
 
     public static FightManager singleton;
 
-    public Ennemy actualEnnemy;
+    public Enemy actualEnemy;
 
     //[SerializeField]
     //GameObject m_modelContainer;
@@ -17,13 +17,15 @@ public class FightManager : MonoBehaviour {
     [SerializeField]
     GameObject m_inventoryContainer;
     [SerializeField]
-    Transform m_ennemyContainer;
+    Transform m_enemyContainer;
     [SerializeField]
     Sprite lamiaSprite;
+    [SerializeField]
+    Sprite fairySprite;
     //[SerializeField]
     //int m_itemNbr;
 
-    List<Ennemy> m_ennemyPool = new List<Ennemy>();
+    List<Enemy> m_enemyPool = new List<Enemy>();
 
     private void Start()
     {
@@ -32,35 +34,38 @@ public class FightManager : MonoBehaviour {
             singleton = this;
         }
         m_heroHP = m_heroHPMax;
-        GenerateEnnemyPool();
+        GenerateEnemyPool();
     }
 
-    public void GenerateEnnemyPool ()
+    public void GenerateEnemyPool ()
     {
         InventoryItem[] items = m_inventoryContainer.GetComponentsInChildren<InventoryItem>();
-        Ennemy model = m_ennemyContainer.gameObject.GetComponentInChildren<Ennemy>();
+        Enemy model = m_enemyContainer.gameObject.GetComponentInChildren<Enemy>();
         foreach (InventoryItem item in items)
         {
-            Ennemy newEnnemy = Instantiate(model.gameObject).GetComponent<Ennemy>();
-            newEnnemy.transform.SetParent(m_ennemyContainer, false);
-            newEnnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
-            switch (newEnnemy.monsterCategory)
+            Enemy newEnemy = Instantiate(model.gameObject).GetComponent<Enemy>();
+            newEnemy.transform.SetParent(m_enemyContainer, false);
+            newEnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
+            switch (newEnemy.monsterCategory)
             {
-                case Ennemy.category.Lamia:
-                    newEnnemy.gameObject.GetComponent<Image>().sprite = lamiaSprite;
+                case Enemy.category.Lamia:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = lamiaSprite;
+                    break;
+                case Enemy.category.Fairy:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = fairySprite;
                     break;
             }
-            m_ennemyPool.Add(newEnnemy);
-            newEnnemy.gameObject.SetActive(false);
+            m_enemyPool.Add(newEnemy);
+            newEnemy.gameObject.SetActive(false);
         }
         model.gameObject.SetActive(false);
     }
 
     public void SelectEnnemy ()
     {
-        actualEnnemy = m_ennemyPool[Random.Range(0, m_ennemyPool.Count)];
-        m_ennemyPool.Remove(actualEnnemy);
-        actualEnnemy.gameObject.SetActive(true);
+        actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
+        m_enemyPool.Remove(actualEnemy);
+        actualEnemy.gameObject.SetActive(true);
     }
 
     public void TakeDamage (float damage)

@@ -11,11 +11,11 @@ public class InventoryItem : MonoBehaviour {
     //[SerializeField]
     //float m_probabilityToHave;
     [SerializeField]
-    List<Ennemy.category> m_vulnerableEnnemies;
+    List<Enemy.category> m_vulnerableEnemies;
     //[SerializeField]
     //float m_vulnerabilityEfficiency;
     [SerializeField]
-    List<Ennemy.category> m_resistantEnnemies;
+    List<Enemy.category> m_resistantEnemies;
     //[SerializeField]
     //float m_resistanceEfficiency;
 
@@ -24,24 +24,24 @@ public class InventoryItem : MonoBehaviour {
     //    return m_probabilityToHave;
     //}
     
-    public List<Ennemy.category> GetVulnerabilities ()
+    public List<Enemy.category> GetVulnerabilities ()
     {
-        return m_vulnerableEnnemies;
+        return m_vulnerableEnemies;
     }
 
     public void Use ()
     {
         float damage = 1;
-        Ennemy ennemy = FightManager.singleton.actualEnnemy;
-        if (m_vulnerableEnnemies.Contains(ennemy.monsterCategory))
+        Enemy enemy = FightManager.singleton.actualEnemy;
+        if (m_vulnerableEnemies.Contains(enemy.monsterCategory))
         {
             damage = 2;
         }
-        else if (m_resistantEnnemies.Contains(ennemy.monsterCategory))
+        else if (m_resistantEnemies.Contains(enemy.monsterCategory))
         {
             damage = 0;
         }
-        ennemy.TakeDamage(damage);
+        enemy.TakeDamage(damage);
         Destroy(gameObject);
         gameObject.SetActive(false);
     }

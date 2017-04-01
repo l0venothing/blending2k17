@@ -2,13 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Ennemy : MonoBehaviour {
+public class Enemy : MonoBehaviour {
 
     [SerializeField]
     float m_maxHitpoint = 2;
     [SerializeField]
     float m_damage = 1;
-    public Ennemy.category monsterCategory;
+    public Enemy.category monsterCategory;
 
     public enum category
     {
