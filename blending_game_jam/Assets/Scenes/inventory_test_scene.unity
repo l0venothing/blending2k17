@@ -209,8 +209,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Mirror
-  m_vulnerableEnnemies: 010000000500000008000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 010000000500000007000000
+  m_resistantEnemies: 
 --- !u!114 &29745251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -345,8 +345,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Silver Spoon
-  m_vulnerableEnnemies: 0100000003000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0100000003000000
+  m_resistantEnemies: 
 --- !u!114 &216021783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -603,8 +603,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Cat
-  m_vulnerableEnnemies: 0300000008000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0300000008000000
+  m_resistantEnemies: 
 --- !u!114 &447070301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -828,8 +828,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Stake
-  m_vulnerableEnnemies: 010000000500000008000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 010000000500000008000000
+  m_resistantEnemies: 
 --- !u!114 &488060498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1130,11 +1130,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 029131cfefe4f474892994d5f664859e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  actualEnnemy: {fileID: 0}
+  actualEnemy: {fileID: 0}
   m_heroHPMax: 3
   m_inventoryContainer: {fileID: 1642442650}
-  m_ennemyContainer: {fileID: 1454855987}
+  m_enemyContainer: {fileID: 1454855987}
   lamiaSprite: {fileID: 21300000, guid: 89e010c8994807a4ea7a746cafeae058, type: 3}
+  fairySprite: {fileID: 21300000, guid: 4850b515698667946b289a323db9e968, type: 3}
 --- !u!1 &1007879184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1236,8 +1237,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Iron Fork
-  m_vulnerableEnnemies: 0400000005000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0400000005000000
+  m_resistantEnemies: 
 --- !u!114 &1007879188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1372,8 +1373,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Fish
-  m_vulnerableEnnemies: 0300000005000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0300000005000000
+  m_resistantEnemies: 
 --- !u!114 &1038911485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1508,8 +1509,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Torch
-  m_vulnerableEnnemies: 0000000001000000030000000400000005000000060000000700000008000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0000000001000000030000000400000005000000060000000700000008000000
+  m_resistantEnemies: 
 --- !u!114 &1062492580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1644,8 +1645,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Sugar
-  m_vulnerableEnnemies: 04000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 04000000
+  m_resistantEnemies: 
 --- !u!114 &1135566783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1780,8 +1781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Axe
-  m_vulnerableEnnemies: 040000000500000006000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 040000000500000006000000
+  m_resistantEnemies: 
 --- !u!114 &1146221312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1959,8 +1960,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Holy Water
-  m_vulnerableEnnemies: 000000000100000002000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 000000000100000002000000
+  m_resistantEnemies: 
 --- !u!114 &1258383412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2147,8 +2148,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Potted plant
-  m_vulnerableEnnemies: 06000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 06000000
+  m_resistantEnemies: 
 --- !u!114 &1427942398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2283,8 +2284,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Rubber Chicken
-  m_vulnerableEnnemies: 03000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 03000000
+  m_resistantEnemies: 
 --- !u!114 &1452990726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2518,8 +2519,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Salt
-  m_vulnerableEnnemies: 0200000006000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0200000006000000
+  m_resistantEnemies: 
 --- !u!114 &1579910971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2638,7 +2639,7 @@ MonoBehaviour:
     m_Top: 0
     m_Bottom: 0
   m_ChildAlignment: 1
-  m_Spacing: 6
+  m_Spacing: 8
   m_ChildForceExpandWidth: 0
   m_ChildForceExpandHeight: 0
   m_ChildControlWidth: 0
@@ -2744,8 +2745,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Banana
-  m_vulnerableEnnemies: 000000000700000007000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0000000007000000
+  m_resistantEnemies: 
 --- !u!114 &1809583999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2880,8 +2881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Garlic
-  m_vulnerableEnnemies: 01000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 01000000
+  m_resistantEnemies: 
 --- !u!114 &1879981957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3016,8 +3017,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Rice
-  m_vulnerableEnnemies: 04000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 04000000
+  m_resistantEnemies: 
 --- !u!114 &1891779513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3152,8 +3153,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Toothbrush
-  m_vulnerableEnnemies: 04000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 04000000
+  m_resistantEnemies: 
 --- !u!114 &1897742933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3322,8 +3323,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8, y: -8}
-  m_SizeDelta: {x: -16, y: -16}
+  m_AnchoredPosition: {x: 0, y: -8}
+  m_SizeDelta: {x: 0, y: -16}
   m_Pivot: {x: 0, y: 1}
 --- !u!114 &2010124031
 MonoBehaviour:
@@ -3471,8 +3472,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Taco
-  m_vulnerableEnnemies: 0200000007000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0200000007000000
+  m_resistantEnemies: 
 --- !u!114 &2054604024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3607,8 +3608,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Crucifix
-  m_vulnerableEnnemies: 0100000002000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 0100000002000000
+  m_resistantEnemies: 
 --- !u!114 &2109357902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3743,8 +3744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Sword
-  m_vulnerableEnnemies: 07000000
-  m_resistantEnnemies: 
+  m_vulnerableEnemies: 07000000
+  m_resistantEnemies: 
 --- !u!114 &2133466617
 MonoBehaviour:
   m_ObjectHideFlags: 0
