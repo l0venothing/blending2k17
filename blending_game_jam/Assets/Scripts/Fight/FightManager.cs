@@ -33,7 +33,6 @@ public class FightManager : MonoBehaviour {
         }
         m_heroHP = m_heroHPMax;
         GenerateEnnemyPool();
-        SelectEnnemy();
     }
 
     public void GenerateEnnemyPool ()
