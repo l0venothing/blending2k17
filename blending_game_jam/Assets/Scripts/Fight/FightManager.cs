@@ -26,6 +26,8 @@ public class FightManager : MonoBehaviour {
     Sprite fairySprite;
     [SerializeField]
     Sprite demonSprite;
+    [SerializeField]
+    Sprite spiderLadySprite;
     //[SerializeField]
     //int m_itemNbr;
 
@@ -61,6 +63,9 @@ public class FightManager : MonoBehaviour {
                     break;
                 case Enemy.category.Demon:
                     newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
+                    break;
+                case Enemy.category.SpiderWoman:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
                     break;
             }
             m_enemyPool.Add(newEnemy);
