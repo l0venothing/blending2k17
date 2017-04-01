@@ -43,9 +43,7 @@ public class Enemy : MonoBehaviour {
 
     void Die ()
     {
-        Destroy(gameObject);
-        FightManager.singleton.StopFight();
         print("Monster dies");
-        gameObject.SetActive(false);
+        FightManager.singleton.StopFight();
     }
 }

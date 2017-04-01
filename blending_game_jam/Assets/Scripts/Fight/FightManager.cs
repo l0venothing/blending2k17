@@ -84,6 +84,8 @@ public class FightManager : MonoBehaviour {
 
     public void StopFight ()
     {
+        Destroy(actualEnemy.gameObject);
+        actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
         m_UIContainer.SetActive(false);
     }
