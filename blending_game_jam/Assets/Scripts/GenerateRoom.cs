@@ -6,10 +6,15 @@ public class GenerateRoom : MonoBehaviour {
 
     public string textureName;
     public int length = 3;
+    public List<int> doors;
+    public GameObject origin;
+
+    private bool firstDoor = false;
 
 
 	// Use this for initialization
-	void Start () {
+	public void Initialize (GameObject origin) {
+        this.origin = origin;
         for(int index=0; index<length; index++){
             Room(index);
         }
@@ -23,16 +28,31 @@ public class GenerateRoom : MonoBehaviour {
 
 
         // load game object
-        GameObject bg_gameobject = Instantiate(Resources.Load("room_bg")) as GameObject;
+        GameObject bg_gameobject;
+
+        if(doors.Contains(number)){
+            bg_gameobject = Instantiate(Resources.Load("room_door")) as GameObject;
+            bg_gameobject.GetComponent<DoorManager>().parent = gameObject;
+        }
+        else{
+            bg_gameobject = Instantiate(Resources.Load("room_bg")) as GameObject;
+        }
+
         bg_gameobject.transform.parent = transform;
 
+        // find good bg
         GameObject border = Instantiate(Resources.Load("room_bg")) as GameObject;
         border.transform.parent = transform;
         border.name = "border_" + number;
 
-        // load good sprites
+        // load good sprites for bg
+        string name = "room_bg_";
+        if(doors.Contains(number)){
+            name += "door_";
+        }
         Sprite bgSprite;
-        bgSprite = Resources.Load<Sprite>("room_bg_" + textureName);
+        bgSprite = Resources.Load<Sprite>(name + textureName);
+
 
         Sprite borderSprite;
         if(number == 0){
