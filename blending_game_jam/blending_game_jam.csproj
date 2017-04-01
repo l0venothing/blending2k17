@@ -81,6 +81,8 @@
     <Compile Include="Assets\Scripts\Fight\Ennemy.cs" />
     <Compile Include="Assets\Scripts\Fight\FightManager.cs" />
     <Compile Include="Assets\Scripts\Fight\InventoryItem.cs" />
+    <Compile Include="Assets\Scripts\GenerateRoom.cs" />
+    <Compile Include="Assets\Scripts\PlayerController.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

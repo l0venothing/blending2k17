@@ -30,10 +30,21 @@ public class Ennemy : MonoBehaviour {
         {
             Die();
         }
+        else
+        {
+            Fight();
+        }
     }
 
-    protected void Die ()
+    void Fight ()
     {
-        // dying stuff
+        FightManager.singleton.TakeDamage(m_damage);
+    }
+
+    void Die ()
+    {
+        Destroy(gameObject);
+        print("Monster dies");
+        gameObject.SetActive(false);
     }
 }

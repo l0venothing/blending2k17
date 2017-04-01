@@ -12,12 +12,12 @@ public class InventoryItem : MonoBehaviour {
     //float m_probabilityToHave;
     [SerializeField]
     List<Ennemy.category> m_vulnerableEnnemies;
-    [SerializeField]
-    float m_vulnerabilityEfficiency;
+    //[SerializeField]
+    //float m_vulnerabilityEfficiency;
     [SerializeField]
     List<Ennemy.category> m_resistantEnnemies;
-    [SerializeField]
-    float m_resistanceEfficiency;
+    //[SerializeField]
+    //float m_resistanceEfficiency;
 
     //public float GetProbability ()
     //{

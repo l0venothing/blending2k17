@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour {
 
@@ -11,9 +12,14 @@ public class FightManager : MonoBehaviour {
     //[SerializeField]
     //GameObject m_modelContainer;
     [SerializeField]
+    float m_heroHPMax = 3;
+    float m_heroHP;
+    [SerializeField]
     GameObject m_inventoryContainer;
     [SerializeField]
     Transform m_ennemyContainer;
+    [SerializeField]
+    Sprite lamiaSprite;
     //[SerializeField]
     //int m_itemNbr;
 
@@ -25,6 +31,7 @@ public class FightManager : MonoBehaviour {
         {
             singleton = this;
         }
+        m_heroHP = m_heroHPMax;
         GenerateEnnemyPool();
         SelectEnnemy();
     }
@@ -38,6 +45,12 @@ public class FightManager : MonoBehaviour {
             Ennemy newEnnemy = Instantiate(model.gameObject).GetComponent<Ennemy>();
             newEnnemy.transform.SetParent(m_ennemyContainer, false);
             newEnnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
+            switch (newEnnemy.monsterCategory)
+            {
+                case Ennemy.category.Lamia:
+                    newEnnemy.gameObject.GetComponent<Image>().sprite = lamiaSprite;
+                    break;
+            }
             m_ennemyPool.Add(newEnnemy);
             newEnnemy.gameObject.SetActive(false);
         }
@@ -47,7 +60,22 @@ public class FightManager : MonoBehaviour {
     public void SelectEnnemy ()
     {
         actualEnnemy = m_ennemyPool[Random.Range(0, m_ennemyPool.Count)];
+        m_ennemyPool.Remove(actualEnnemy);
         actualEnnemy.gameObject.SetActive(true);
+    }
+
+    public void TakeDamage (float damage)
+    {
+        m_heroHP -= damage;
+        if (m_heroHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die ()
+    {
+        print("Hero dies");
     }
 
     //public void GenerateInventory ()
