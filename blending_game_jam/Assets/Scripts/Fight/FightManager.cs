@@ -79,6 +79,7 @@ public class FightManager : MonoBehaviour {
 
     void Die ()
     {
+        gameObject.SetActive(false);
         print("Hero dies");
     }
 
