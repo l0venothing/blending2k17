@@ -1,23 +1,37 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class FightManager : MonoBehaviour {
 
     public static FightManager singleton;
 
-    public Ennemy actualEnnemy;
+    public Enemy actualEnemy;
 
     //[SerializeField]
     //GameObject m_modelContainer;
     [SerializeField]
+    float m_heroHPMax = 3;
+    float m_heroHP;
+    [SerializeField]
+    GameObject m_UIContainer;
+    [SerializeField]
     GameObject m_inventoryContainer;
     [SerializeField]
-    Transform m_ennemyContainer;
+    Transform m_enemyContainer;
+    [SerializeField]
+    Sprite lamiaSprite;
+    [SerializeField]
+    Sprite fairySprite;
+    [SerializeField]
+    Sprite demonSprite;
+    [SerializeField]
+    Sprite spiderLadySprite;
     //[SerializeField]
     //int m_itemNbr;
 
-    List<Ennemy> m_ennemyPool = new List<Ennemy>();
+    List<Enemy> m_enemyPool = new List<Enemy>();
 
     private void Start()
     {
@@ -25,29 +39,68 @@ public class FightManager : MonoBehaviour {
         {
             singleton = this;
         }
-        GenerateEnnemyPool();
-        SelectEnnemy();
+        m_heroHP = m_heroHPMax;
+        GenerateEnemyPool();
+        m_UIContainer.SetActive(false);
     }
 
-    public void GenerateEnnemyPool ()
+    public void GenerateEnemyPool ()
     {
         InventoryItem[] items = m_inventoryContainer.GetComponentsInChildren<InventoryItem>();
-        Ennemy model = m_ennemyContainer.gameObject.GetComponentInChildren<Ennemy>();
+        Enemy model = m_enemyContainer.gameObject.GetComponentInChildren<Enemy>();
         foreach (InventoryItem item in items)
         {
-            Ennemy newEnnemy = Instantiate(model.gameObject).GetComponent<Ennemy>();
-            newEnnemy.transform.SetParent(m_ennemyContainer, false);
-            newEnnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
-            m_ennemyPool.Add(newEnnemy);
-            newEnnemy.gameObject.SetActive(false);
+            Enemy newEnemy = Instantiate(model.gameObject).GetComponent<Enemy>();
+            newEnemy.transform.SetParent(m_enemyContainer, false);
+            newEnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
+            switch (newEnemy.monsterCategory)
+            {
+                case Enemy.category.Lamia:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = lamiaSprite;
+                    break;
+                case Enemy.category.Fairy:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = fairySprite;
+                    break;
+                case Enemy.category.Demon:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
+                    break;
+                case Enemy.category.SpiderWoman:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
+                    break;
+            }
+            m_enemyPool.Add(newEnemy);
+            newEnemy.gameObject.SetActive(false);
         }
         model.gameObject.SetActive(false);
     }
 
-    public void SelectEnnemy ()
+    public void StartFight ()
     {
-        actualEnnemy = m_ennemyPool[Random.Range(0, m_ennemyPool.Count)];
-        actualEnnemy.gameObject.SetActive(true);
+        m_UIContainer.SetActive(true);
+        actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
+        m_enemyPool.Remove(actualEnemy);
+        actualEnemy.gameObject.SetActive(true);
+    }
+
+    public void StopFight ()
+    {
+        actualEnemy = null;
+        m_UIContainer.SetActive(false);
+    }
+
+    public void TakeDamage (float damage)
+    {
+        m_heroHP -= damage;
+        if (m_heroHP <= 0)
+        {
+            Die();
+        }
+    }
+
+    void Die ()
+    {
+        StopFight();
+        print("Hero dies");
     }
 
     //public void GenerateInventory ()
