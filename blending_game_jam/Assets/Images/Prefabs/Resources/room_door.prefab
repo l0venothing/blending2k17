@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4587d99c88512f841b3e5fd87855453e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  player: {fileID: 1130326876538222, guid: 8039ecb1e1c92d84ca51205b945db546, type: 2}
   parent: {fileID: 0}
   destination: {fileID: 0}
 --- !u!212 &212243012734866904
