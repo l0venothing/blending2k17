@@ -64,7 +64,7 @@ public class FightManager : MonoBehaviour {
                 case Enemy.category.Demon:
                     newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
                     break;
-                case Enemy.category.SpiderWoman:
+                case Enemy.category.SpiderLady:
                     newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
                     break;
             }
@@ -84,6 +84,8 @@ public class FightManager : MonoBehaviour {
 
     public void StopFight ()
     {
+        Destroy(actualEnemy.gameObject);
+        actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
         m_UIContainer.SetActive(false);
     }
