@@ -46,7 +46,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Scripts\DoorManager.cs" />
+     <Compile Include="Assets\Scripts\Fight\Ennemy.cs" />
+     <Compile Include="Assets\Scripts\Fight\FightManager.cs" />
+     <Compile Include="Assets\Scripts\Fight\InventoryItem.cs" />
      <Compile Include="Assets\Scripts\GenerateRoom.cs" />
+     <Compile Include="Assets\Scripts\MapManager.cs" />
+     <Compile Include="Assets\Scripts\PlayerController.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

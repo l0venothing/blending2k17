@@ -8,6 +8,7 @@ public class GenerateRoom : MonoBehaviour {
     public int length = 3;
     public List<int> doors;
     public GameObject origin;
+    public List<DoorManager> doorsList;
 
     private bool firstDoor = false;
 
@@ -33,6 +34,7 @@ public class GenerateRoom : MonoBehaviour {
         if(doors.Contains(number)){
             bg_gameobject = Instantiate(Resources.Load("room_door")) as GameObject;
             bg_gameobject.GetComponent<DoorManager>().parent = gameObject;
+            doorsList.Add(bg_gameobject.GetComponent<DoorManager>());
         }
         else{
             bg_gameobject = Instantiate(Resources.Load("room_bg")) as GameObject;
@@ -52,7 +54,6 @@ public class GenerateRoom : MonoBehaviour {
         }
         Sprite bgSprite;
         bgSprite = Resources.Load<Sprite>(name + textureName);
-
 
         Sprite borderSprite;
         if(number == 0){
