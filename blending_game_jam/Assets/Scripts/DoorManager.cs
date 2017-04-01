@@ -16,4 +16,8 @@ public class DoorManager : MonoBehaviour {
 	void Update () {
 
 	}
+
+    public void OpenDoor(){
+        print("Door open!");
+    }
 }

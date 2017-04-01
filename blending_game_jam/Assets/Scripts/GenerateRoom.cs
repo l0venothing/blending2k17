@@ -7,10 +7,14 @@ public class GenerateRoom : MonoBehaviour {
     public string textureName;
     public int length = 3;
     public List<int> doors;
+    public GameObject origin;
+
+    private bool firstDoor = false;
 
 
 	// Use this for initialization
-	public void Initialize () {
+	public void Initialize (GameObject origin) {
+        this.origin = origin;
         for(int index=0; index<length; index++){
             Room(index);
         }
