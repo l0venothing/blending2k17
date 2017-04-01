@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 
     public enum category
     {
-        Zombie, Vampire, Demon, Werewolf, Fairy, SpiderWoman, Ent, Minotaur, Lamia
+        Zombie, Vampire, Demon, Werewolf, Fairy, SpiderLady, Ent, Minotaur, Lamia
     }
 
     [SerializeField]
