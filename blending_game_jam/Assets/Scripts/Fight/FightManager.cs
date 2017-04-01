@@ -35,6 +35,7 @@ public class FightManager : MonoBehaviour {
         }
         m_heroHP = m_heroHPMax;
         GenerateEnemyPool();
+        m_inventoryContainer.SetActive(false);
     }
 
     public void GenerateEnemyPool ()
@@ -61,11 +62,18 @@ public class FightManager : MonoBehaviour {
         model.gameObject.SetActive(false);
     }
 
-    public void SelectEnnemy ()
+    public void StartFight ()
     {
         actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
         m_enemyPool.Remove(actualEnemy);
         actualEnemy.gameObject.SetActive(true);
+        m_inventoryContainer.SetActive(true);
+    }
+
+    public void StopFight ()
+    {
+        actualEnemy = null;
+        m_inventoryContainer.SetActive(false);
     }
 
     public void TakeDamage (float damage)
@@ -79,7 +87,7 @@ public class FightManager : MonoBehaviour {
 
     void Die ()
     {
-        gameObject.SetActive(false);
+        StopFight();
         print("Hero dies");
     }
 
