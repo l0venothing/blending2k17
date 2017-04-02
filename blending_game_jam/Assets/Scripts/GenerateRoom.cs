@@ -11,6 +11,7 @@ public class GenerateRoom : MonoBehaviour {
     public List<DoorManager> doorsList;
 
     private bool firstDoor = false;
+    private bool ennemyOk = false;
 
 
 	// Use this for initialization
@@ -26,6 +27,7 @@ public class GenerateRoom : MonoBehaviour {
         //compute position
         Vector3 pos = new Vector3(0, 0, 0);
         pos.x = number * 6f;
+
 
 
         // load game object
@@ -99,10 +101,26 @@ public class GenerateRoom : MonoBehaviour {
         bg_gameobject.transform.localPosition = pos;
         border.transform.localPosition = pos;
 
+        if(number > 1 && !ennemyOk){
+            int rnd = Random.Range(0, length - 3);
+            if(number == length -1){
+                rnd = 0;
+            }
+            if(rnd==0){
+                ennemyOk = true;
+                GameObject enemy = Instantiate(Resources.Load("Enemy")) as GameObject;
+                enemy.transform.parent = bg_gameobject.transform;
+                Vector3 epos = bg_gameobject.transform.position;
+                epos.y = -1.6f;
+                enemy.transform.position = epos;
+            }
+
+        }
+
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 
-	}
+    }
 }

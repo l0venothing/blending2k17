@@ -13,11 +13,11 @@ public class nmeScript : MonoBehaviour {
 	void Start () {
         player = GameObject.FindWithTag("Player");
 	}
-	
+
 	// Update is called once per frame
 	void Update () {
         distanceWithPlayer = transform.position - player.transform.position;
-      if (distanceWithPlayer.x< 10 )
+      if (distanceWithPlayer.x < 10 )
         {
             nmeSpeed += acceleration * Time.deltaTime;
             Vector2 velocity = new Vector2((transform.position.x - player.transform.position.x) * nmeSpeed, 0);
@@ -25,12 +25,18 @@ public class nmeScript : MonoBehaviour {
 
         }
 
-        if (distanceWithPlayer.x > 1)
+        if (distanceWithPlayer.x < 1)
         {
             nmeSpeed = 0;
             //lancer combat
         }
 
-
+    }
+    void OnTriggerEnter2D(Collider2D other)
+    {
+       if (other.gameObject.tag == "Player")
+        {
+            print("Fight!!!!!!");
+        }
     }
 }
