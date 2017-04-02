@@ -158,6 +158,8 @@ public class FightManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         if (m_heroHP <= 0)
         {
+            int score = m_enemyPool.Count + 1;
+            PlayerPrefs.SetInt("score", score);
             SceneManager.LoadScene("game_over");
         }
         Destroy(actualEnemy.gameObject);
