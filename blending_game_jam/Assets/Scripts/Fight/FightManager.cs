@@ -21,6 +21,10 @@ public class FightManager : MonoBehaviour {
     [SerializeField]
     Transform m_enemyContainer;
     [SerializeField]
+    AudioClip heroDies;
+    [SerializeField]
+    AudioClip monsterDies;
+    [SerializeField]
     Sprite lamiaSprite;
     [SerializeField]
     Sprite fairySprite;
@@ -91,6 +95,14 @@ public class FightManager : MonoBehaviour {
 
     public void StopFight ()
     {
+        if (m_heroHP > 0)
+        {
+            StartCoroutine(PlayWhenPossible(monsterDies));
+        }
+        else
+        {
+            StartCoroutine(PlayWhenPossible(heroDies));
+        }
         Destroy(actualEnemy.gameObject);
         actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
@@ -106,10 +118,18 @@ public class FightManager : MonoBehaviour {
         }
     }
 
-    public void PlaySound (AudioClip soundToPlay)
+    public void PlayFightSound (AudioClip soundToPlay)
     {
         m_player.clip = soundToPlay;
         m_player.Play();
+    }
+
+    IEnumerator PlayWhenPossible (AudioClip soundToPlay)
+    {
+        while (m_player.isPlaying)
+        {
+            yield return null;
+        }
     }
 
     void Die ()

@@ -33,7 +33,6 @@ public class InventoryItem : MonoBehaviour {
 
     public void Use ()
     {
-        FightManager.singleton.PlaySound(sound);
         float damage = 1;
         Enemy enemy = FightManager.singleton.actualEnemy;
         if (m_vulnerableEnemies.Contains(enemy.monsterCategory))
@@ -45,6 +44,7 @@ public class InventoryItem : MonoBehaviour {
             damage = 0;
         }
         enemy.TakeDamage(damage);
+        FightManager.singleton.PlayFightSound(sound);
         Destroy(gameObject);
         gameObject.SetActive(false);
     }
