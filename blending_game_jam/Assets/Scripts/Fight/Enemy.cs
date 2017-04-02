@@ -12,7 +12,7 @@ public class Enemy : MonoBehaviour {
 
     public enum category
     {
-        Zombie, Vampire, Demon, Werewolf, Fairy, SpiderWoman, Ent, Minotaur, Lamia
+        Zombie, Vampire, Demon, Werewolf, Fairy, SpiderLady, Ent, Minotaur, Lamia
     }
 
     [SerializeField]
@@ -43,8 +43,7 @@ public class Enemy : MonoBehaviour {
 
     void Die ()
     {
-        Destroy(gameObject);
         print("Monster dies");
-        gameObject.SetActive(false);
+        FightManager.singleton.StopFight();
     }
 }

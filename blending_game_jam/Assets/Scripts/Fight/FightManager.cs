@@ -15,6 +15,8 @@ public class FightManager : MonoBehaviour {
     float m_heroHPMax = 3;
     float m_heroHP;
     [SerializeField]
+    GameObject m_UIContainer;
+    [SerializeField]
     GameObject m_inventoryContainer;
     [SerializeField]
     Transform m_enemyContainer;
@@ -22,6 +24,12 @@ public class FightManager : MonoBehaviour {
     Sprite lamiaSprite;
     [SerializeField]
     Sprite fairySprite;
+    [SerializeField]
+    Sprite demonSprite;
+    [SerializeField]
+    Sprite spiderLadySprite;
+    [SerializeField]
+    Sprite vampireSprite;
     //[SerializeField]
     //int m_itemNbr;
 
@@ -35,6 +43,7 @@ public class FightManager : MonoBehaviour {
         }
         m_heroHP = m_heroHPMax;
         GenerateEnemyPool();
+        m_UIContainer.SetActive(false);
     }
 
     public void GenerateEnemyPool ()
@@ -54,6 +63,15 @@ public class FightManager : MonoBehaviour {
                 case Enemy.category.Fairy:
                     newEnemy.gameObject.GetComponent<Image>().sprite = fairySprite;
                     break;
+                case Enemy.category.Demon:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
+                    break;
+                case Enemy.category.SpiderLady:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
+                    break;
+                case Enemy.category.Vampire:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = vampireSprite;
+                    break;
             }
             m_enemyPool.Add(newEnemy);
             newEnemy.gameObject.SetActive(false);
@@ -61,11 +79,20 @@ public class FightManager : MonoBehaviour {
         model.gameObject.SetActive(false);
     }
 
-    public void SelectEnnemy ()
+    public void StartFight ()
     {
+        m_UIContainer.SetActive(true);
         actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
         m_enemyPool.Remove(actualEnemy);
         actualEnemy.gameObject.SetActive(true);
+    }
+
+    public void StopFight ()
+    {
+        Destroy(actualEnemy.gameObject);
+        actualEnemy.gameObject.SetActive(false);
+        actualEnemy = null;
+        m_UIContainer.SetActive(false);
     }
 
     public void TakeDamage (float damage)
@@ -79,7 +106,7 @@ public class FightManager : MonoBehaviour {
 
     void Die ()
     {
-        gameObject.SetActive(false);
+        StopFight();
         print("Hero dies");
     }
 
