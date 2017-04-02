@@ -7,14 +7,15 @@ public class GenerateRoom : MonoBehaviour {
     public string textureName;
     public int length = 3;
     public List<int> doors;
-    public GameObject origin;
+    public DoorManager origin;
     public List<DoorManager> doorsList;
 
     private bool firstDoor = false;
+    private bool ennemyOk = false;
 
 
 	// Use this for initialization
-	public void Initialize (GameObject origin) {
+	public void Initialize (DoorManager origin) {
         this.origin = origin;
         for(int index=0; index<length; index++){
             Room(index);
@@ -26,6 +27,7 @@ public class GenerateRoom : MonoBehaviour {
         //compute position
         Vector3 pos = new Vector3(0, 0, 0);
         pos.x = number * 6f;
+
 
 
         // load game object
@@ -50,10 +52,29 @@ public class GenerateRoom : MonoBehaviour {
         // load good sprites for bg
         string name = "room_bg_";
         if(doors.Contains(number)){
-            name += "door_";
+            if(doors[doors.Count -1] == number && doors.Count > 1){
+                name += "stair_";
+            }
+            else if(doors[0] == number){
+                if(origin != null){
+                    bg_gameobject.GetComponent<DoorManager>().destination = origin;
+                    origin.destination = bg_gameobject.GetComponent<DoorManager>();
+
+                    if(doors.Count > 1){
+                        name += "stair_";
+                    }
+                    else{
+                        name += "door_";
+                    }
+                }
+            }
+            else{
+                name += "door_";
+            }
         }
         Sprite bgSprite;
         bgSprite = Resources.Load<Sprite>(name + textureName);
+
 
         Sprite borderSprite;
         if(number == 0){
@@ -80,10 +101,26 @@ public class GenerateRoom : MonoBehaviour {
         bg_gameobject.transform.localPosition = pos;
         border.transform.localPosition = pos;
 
+        if(number > 1 && !ennemyOk){
+            int rnd = Random.Range(0, length - 3);
+            if(number == length -1){
+                rnd = 0;
+            }
+            if(rnd==0){
+                ennemyOk = true;
+                GameObject enemy = Instantiate(Resources.Load("Enemy")) as GameObject;
+                enemy.transform.parent = bg_gameobject.transform;
+                Vector3 epos = bg_gameobject.transform.position;
+                epos.y = -1.6f;
+                enemy.transform.position = epos;
+            }
+
+        }
+
     }
 
-	// Update is called once per frame
-	void Update () {
+    // Update is called once per frame
+    void Update () {
 
-	}
+    }
 }

@@ -9,15 +9,22 @@ public class MapManager : MonoBehaviour {
 
     public int rooms = 5;
     private bool firstRoom = true;
+    private DoorManager origin;
 
-	// Use this for initialization
-	void Start () {
+    // Use this for initialization
+    void Start () {
         int _rooms = rooms;
         int index = 0;
         while(_rooms > 0){
-            int roomsGenerated = AddRoom(index++);
+            int roomsGenerated;
+            if(index == 0){
+                roomsGenerated = AddRoom(index++);
+            }
+            else{
+                print(origin);
+                roomsGenerated = AddRoom(index++, origin);
+            }
             _rooms -= roomsGenerated;
-            print(_rooms);
         }
 	}
 
@@ -26,7 +33,7 @@ public class MapManager : MonoBehaviour {
 
 	}
 
-    private int AddRoom(int index){
+    private int AddRoom(int index, DoorManager origin=null){
         int numberOfDoor = System.Math.Min(Random.Range(2, 7), rooms);
         numberOfDoor = System.Math.Max(numberOfDoor, 1);
 
@@ -48,15 +55,34 @@ public class MapManager : MonoBehaviour {
         }
 
         int length = doorIndex;
-        GameObject newRoom = NewRoom(new Vector3(0,0,index * 12), CORRIDOR, doors, length);
+        GameObject newRoom = NewRoom(new Vector3(0,0,index * 12), CORRIDOR, doors, length, origin);
+        if(index == 0){
+            newRoom.active = true;
+        }
 
-        if(index > 0){}
+        GenerateRoom genRoom = newRoom.GetComponent<GenerateRoom>();
+        this.origin = genRoom.doorsList[genRoom.doorsList.Count -1];
+
+
+        int indexBegin = 0;
+        if(index > 0){
+            indexBegin +=1;
+        }
+
+        for(int idx=indexBegin; idx < genRoom.doorsList.Count -1; idx++){
+            DoorManager doorMan = genRoom.doorsList[idx];
+            Vector3 bdPos = new Vector3(idx * 24, 0, index * 12 + 6);
+
+            doors = new List<int>();
+            doors.Add(1);
+            GameObject nr = NewRoom(bdPos, BED_ROOM, doors, 3, doorMan);
+        }
 
         return roomsGenerated;
 
     }
 
-    private GameObject NewRoom(Vector3 position, string name, List<int> doors, int length, GameObject origin=null, bool outNeeded=true){
+    private GameObject NewRoom(Vector3 position, string name, List<int> doors, int length, DoorManager origin=null, bool outNeeded=true){
 
         GameObject room = Instantiate(Resources.Load("room")) as GameObject;
         room.transform.localPosition = position;
@@ -66,7 +92,8 @@ public class MapManager : MonoBehaviour {
         generate.doors = doors;
         generate.textureName = name;
         generate.Initialize(origin);
-
+        room.active = false;
+        room.transform.parent = transform;
         return room;
     }
 }

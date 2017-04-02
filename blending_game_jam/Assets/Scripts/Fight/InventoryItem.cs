@@ -16,6 +16,8 @@ public class InventoryItem : MonoBehaviour {
     //float m_vulnerabilityEfficiency;
     [SerializeField]
     List<Enemy.category> m_resistantEnemies;
+    [SerializeField]
+    AudioClip sound;
     //[SerializeField]
     //float m_resistanceEfficiency;
 
@@ -42,6 +44,7 @@ public class InventoryItem : MonoBehaviour {
             damage = 0;
         }
         enemy.TakeDamage(damage);
+        FightManager.singleton.PlayFightSound(sound);
         Destroy(gameObject);
         gameObject.SetActive(false);
     }
