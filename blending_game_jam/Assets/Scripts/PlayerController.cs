@@ -15,11 +15,11 @@ public class PlayerController : MonoBehaviour
          translation= Time.deltaTime * speed;
         if (Input.GetButton("Horizontal") && Input.GetAxisRaw("Horizontal") > 0)
         {
-            transform.Translate(-translation, 0, 0);
+            transform.Translate(translation, 0, 0);
         }
         else if (Input.GetButton("Horizontal") && Input.GetAxisRaw("Horizontal") < 0)
         {
-            transform.Translate(translation, 0, 0);
+            transform.Translate(-translation, 0, 0);
         }
     }
 }
