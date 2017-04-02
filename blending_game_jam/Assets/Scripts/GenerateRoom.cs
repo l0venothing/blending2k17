@@ -7,14 +7,14 @@ public class GenerateRoom : MonoBehaviour {
     public string textureName;
     public int length = 3;
     public List<int> doors;
-    public GameObject origin;
+    public DoorManager origin;
     public List<DoorManager> doorsList;
 
     private bool firstDoor = false;
 
 
 	// Use this for initialization
-	public void Initialize (GameObject origin) {
+	public void Initialize (DoorManager origin) {
         this.origin = origin;
         for(int index=0; index<length; index++){
             Room(index);
@@ -50,10 +50,29 @@ public class GenerateRoom : MonoBehaviour {
         // load good sprites for bg
         string name = "room_bg_";
         if(doors.Contains(number)){
-            name += "door_";
+            if(doors[doors.Count -1] == number && doors.Count > 1){
+                name += "stair_";
+            }
+            else if(doors[0] == number){
+                if(origin != null){
+                    bg_gameobject.GetComponent<DoorManager>().destination = origin;
+                    origin.destination = bg_gameobject.GetComponent<DoorManager>();
+
+                    if(doors.Count > 1){
+                        name += "stair_";
+                    }
+                    else{
+                        name += "door_";
+                    }
+                }
+            }
+            else{
+                name += "door_";
+            }
         }
         Sprite bgSprite;
         bgSprite = Resources.Load<Sprite>(name + textureName);
+
 
         Sprite borderSprite;
         if(number == 0){

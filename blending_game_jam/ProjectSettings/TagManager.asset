@@ -6,6 +6,7 @@ TagManager:
   tags:
   - CamBlock-L
   - CamBlock-R
+  - Fade
   layers:
   - Default
   - TransparentFX
