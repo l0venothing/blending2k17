@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 695aef1dfb6ec47448f4c98baae15aed
+timeCreated: 1491075755
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Broken Ground
+  fontNames:
+  - Broken Ground
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

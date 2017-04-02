@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 04750a0a0009252458bf5b406b034bb3
+timeCreated: 1491075775
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Dresden Elektronik
+  fontNames:
+  - Dresden Elektronik
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
