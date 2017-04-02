@@ -21,6 +21,8 @@ public class FightManager : MonoBehaviour {
     [SerializeField]
     Transform m_enemyContainer;
     [SerializeField]
+    GameObject m_roomManager;
+    [SerializeField]
     AudioClip heroDies;
     [SerializeField]
     AudioClip monsterDies;
@@ -92,6 +94,9 @@ public class FightManager : MonoBehaviour {
                 case Enemy.category.Minotaur:
                     newEnemy.gameObject.GetComponent<Image>().sprite = minotaurSprite;
                     break;
+                case Enemy.category.Zombie:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = zombieSprite;
+                    break;
             }
             m_enemyPool.Add(newEnemy);
             newEnemy.gameObject.SetActive(false);
@@ -101,10 +106,14 @@ public class FightManager : MonoBehaviour {
 
     public void StartFight ()
     {
-        m_UIContainer.SetActive(true);
-        actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
-        m_enemyPool.Remove(actualEnemy);
-        actualEnemy.gameObject.SetActive(true);
+        if (actualEnemy == null)
+        {
+            m_roomManager.SetActive(false);
+            m_UIContainer.SetActive(true);
+            actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
+            m_enemyPool.Remove(actualEnemy);
+            actualEnemy.gameObject.SetActive(true);
+        }
     }
 
     public void StopFight ()
@@ -121,6 +130,7 @@ public class FightManager : MonoBehaviour {
         actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
         m_UIContainer.SetActive(false);
+        m_roomManager.SetActive(true);
     }
 
     public void TakeDamage (float damage)
@@ -144,6 +154,7 @@ public class FightManager : MonoBehaviour {
         {
             yield return null;
         }
+        PlayWhenPossible(soundToPlay);
     }
 
     void Die ()

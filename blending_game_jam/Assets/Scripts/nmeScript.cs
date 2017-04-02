@@ -36,7 +36,8 @@ public class nmeScript : MonoBehaviour {
     {
        if (other.gameObject.tag == "Player")
         {
-            print("Fight!!!!!!");
+            Destroy(gameObject);
+            FightManager.singleton.StartFight();
         }
     }
 }
