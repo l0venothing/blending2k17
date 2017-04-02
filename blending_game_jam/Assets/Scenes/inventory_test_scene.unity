@@ -1250,6 +1250,10 @@ MonoBehaviour:
   demonSprite: {fileID: 21300000, guid: 58a1f914f9c4fa74caa1485ab7bb4d7d, type: 3}
   spiderLadySprite: {fileID: 21300000, guid: 9f185108c59f1fe4aaf4f06cf4a3e5dd, type: 3}
   vampireSprite: {fileID: 21300000, guid: d7df02589f357bd41967f74c77945b3a, type: 3}
+  werewolfSprite: {fileID: 21300000, guid: 7a67567cb71fad94ba7bcece5abffc1f, type: 3}
+  minotaurSprite: {fileID: 21300000, guid: e6c3aa5f39d49d1478e4ca2b7cb8d49a, type: 3}
+  zombieSprite: {fileID: 0}
+  dryadSprite: {fileID: 0}
 --- !u!82 &929449377
 AudioSource:
   m_ObjectHideFlags: 0

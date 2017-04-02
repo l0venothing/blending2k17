@@ -34,6 +34,14 @@ public class FightManager : MonoBehaviour {
     Sprite spiderLadySprite;
     [SerializeField]
     Sprite vampireSprite;
+    [SerializeField]
+    Sprite werewolfSprite;
+    [SerializeField]
+    Sprite minotaurSprite;
+    [SerializeField]
+    Sprite zombieSprite;
+    [SerializeField]
+    Sprite dryadSprite;
     //[SerializeField]
     //int m_itemNbr;
     AudioSource m_player;
@@ -77,6 +85,12 @@ public class FightManager : MonoBehaviour {
                     break;
                 case Enemy.category.Vampire:
                     newEnemy.gameObject.GetComponent<Image>().sprite = vampireSprite;
+                    break;
+                case Enemy.category.Werewolf:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = werewolfSprite;
+                    break;
+                case Enemy.category.Minotaur:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = minotaurSprite;
                     break;
             }
             m_enemyPool.Add(newEnemy);
