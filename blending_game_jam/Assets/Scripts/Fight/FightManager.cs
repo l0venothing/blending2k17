@@ -32,6 +32,7 @@ public class FightManager : MonoBehaviour {
     Sprite vampireSprite;
     //[SerializeField]
     //int m_itemNbr;
+    AudioSource m_player;
 
     List<Enemy> m_enemyPool = new List<Enemy>();
 
@@ -41,6 +42,7 @@ public class FightManager : MonoBehaviour {
         {
             singleton = this;
         }
+        m_player = GetComponent<AudioSource>();
         m_heroHP = m_heroHPMax;
         GenerateEnemyPool();
         m_UIContainer.SetActive(false);
@@ -102,6 +104,12 @@ public class FightManager : MonoBehaviour {
         {
             Die();
         }
+    }
+
+    public void PlaySound (AudioClip soundToPlay)
+    {
+        m_player.clip = soundToPlay;
+        m_player.Play();
     }
 
     void Die ()
