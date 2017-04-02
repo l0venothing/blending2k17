@@ -28,6 +28,8 @@ public class FightManager : MonoBehaviour {
     Sprite demonSprite;
     [SerializeField]
     Sprite spiderLadySprite;
+    [SerializeField]
+    Sprite vampireSprite;
     //[SerializeField]
     //int m_itemNbr;
 
@@ -64,8 +66,11 @@ public class FightManager : MonoBehaviour {
                 case Enemy.category.Demon:
                     newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
                     break;
-                case Enemy.category.SpiderWoman:
+                case Enemy.category.SpiderLady:
                     newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
+                    break;
+                case Enemy.category.Vampire:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = vampireSprite;
                     break;
             }
             m_enemyPool.Add(newEnemy);
@@ -84,6 +89,8 @@ public class FightManager : MonoBehaviour {
 
     public void StopFight ()
     {
+        Destroy(actualEnemy.gameObject);
+        actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
         m_UIContainer.SetActive(false);
     }

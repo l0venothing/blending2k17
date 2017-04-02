@@ -592,7 +592,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 10905, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 21300000, guid: 9536bb57b4c36b749aab796c751f5ca8, type: 3}
   m_Type: 0
   m_PreserveAspect: 1
   m_FillCenter: 1
@@ -728,7 +728,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: cc61b5b57d8e4ca40816132093434d9a, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 1b27c3c2c991b354583e2b60333fad60, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1242,6 +1242,7 @@ MonoBehaviour:
   fairySprite: {fileID: 21300000, guid: 4850b515698667946b289a323db9e968, type: 3}
   demonSprite: {fileID: 21300000, guid: 58a1f914f9c4fa74caa1485ab7bb4d7d, type: 3}
   spiderLadySprite: {fileID: 21300000, guid: 9f185108c59f1fe4aaf4f06cf4a3e5dd, type: 3}
+  vampireSprite: {fileID: 21300000, guid: d7df02589f357bd41967f74c77945b3a, type: 3}
 --- !u!1 &1007879184
 GameObject:
   m_ObjectHideFlags: 0
