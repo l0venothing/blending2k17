@@ -85,7 +85,11 @@
     <Compile Include="Assets\Scripts\Fight\InventoryItem.cs" />
     <Compile Include="Assets\Scripts\GenerateRoom.cs" />
     <Compile Include="Assets\Scripts\MapManager.cs" />
+    <Compile Include="Assets\Scripts\MenuLoad.cs" />
     <Compile Include="Assets\Scripts\PlayerController.cs" />
+    <Compile Include="Assets\Scripts\QuitGame.cs" />
+    <Compile Include="Assets\Scripts\SceneChange.cs" />
+    <Compile Include="Assets\Scripts\StartScript.cs" />
     <Compile Include="Assets\Scripts\nmeScript.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
