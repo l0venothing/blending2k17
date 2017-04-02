@@ -41,6 +41,10 @@ public class DoorManager : MonoBehaviour {
             }
             else if(!audio.isPlaying && !fade_in){
                 fade_in = true;
+                destination.parent.active = true;
+                Vector3 pos = player.transform.position;
+                pos.x =  destination.transform.position.x;
+                player.transform.position = pos;
             }
             else if(fade_in){
                 GameObject image = GameObject.FindGameObjectWithTag("Fade");
@@ -51,12 +55,8 @@ public class DoorManager : MonoBehaviour {
                     col.a = 0f;
                     fade_in = false;
                     doorOpening = false;
-                    // :D
-                    destination.parent.active = true;
-                    Vector3 pos = player.transform.position;
-                    pos.x =  destination.transform.position.x;
-                    player.transform.position = pos;
                     parent.active = false;
+                    // :D
                 }
                 image.GetComponent<Image>().color = col;
             }
