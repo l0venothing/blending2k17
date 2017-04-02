@@ -93,6 +93,7 @@ public class MapManager : MonoBehaviour {
         generate.textureName = name;
         generate.Initialize(origin);
         room.active = false;
+        room.transform.parent = transform;
         return room;
     }
 }
