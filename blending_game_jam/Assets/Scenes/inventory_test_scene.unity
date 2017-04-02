@@ -210,7 +210,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Mirror
   m_vulnerableEnemies: 010000000500000007000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0000000004000000
+  sound: {fileID: 8300000, guid: 196c022e87e4e774c80c3329ae1c0c80, type: 3}
 --- !u!114 &29745251
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -346,7 +347,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Silver Spoon
   m_vulnerableEnemies: 0100000003000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 06000000
+  sound: {fileID: 8300000, guid: 68603803c47fd254c938509654b6ddc3, type: 3}
 --- !u!114 &216021783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -709,6 +711,7 @@ MonoBehaviour:
   m_name: Cat
   m_vulnerableEnemies: 0300000008000000
   m_resistantEnemies: 
+  sound: {fileID: 8300000, guid: 2111d1556c847f242bb082e960944efd, type: 3}
 --- !u!114 &447070301
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -933,7 +936,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Stake
   m_vulnerableEnemies: 010000000500000008000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 06000000
+  sound: {fileID: 8300000, guid: 5e0870f7e450a984d9c5228d050e6d6e, type: 3}
 --- !u!114 &488060498
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1196,6 +1200,7 @@ GameObject:
   m_Component:
   - component: {fileID: 929449375}
   - component: {fileID: 929449376}
+  - component: {fileID: 929449377}
   m_Layer: 5
   m_Name: FightingSystem
   m_TagString: Untagged
@@ -1243,6 +1248,86 @@ MonoBehaviour:
   demonSprite: {fileID: 21300000, guid: 58a1f914f9c4fa74caa1485ab7bb4d7d, type: 3}
   spiderLadySprite: {fileID: 21300000, guid: 9f185108c59f1fe4aaf4f06cf4a3e5dd, type: 3}
   vampireSprite: {fileID: 21300000, guid: d7df02589f357bd41967f74c77945b3a, type: 3}
+--- !u!82 &929449377
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929449374}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!1 &1007879184
 GameObject:
   m_ObjectHideFlags: 0
@@ -1345,7 +1430,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Iron Fork
   m_vulnerableEnemies: 0400000005000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 020000000600000008000000
+  sound: {fileID: 8300000, guid: f08e1aa9c487b0743b37b609b42d582e, type: 3}
 --- !u!114 &1007879188
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1481,7 +1567,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Fish
   m_vulnerableEnemies: 0300000005000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0400000006000000
+  sound: {fileID: 8300000, guid: 9117e290aac9e1b4290c4f82fecae288, type: 3}
 --- !u!114 &1038911485
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1617,7 +1704,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Torch
   m_vulnerableEnemies: 0000000001000000030000000400000005000000060000000700000008000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 02000000
+  sound: {fileID: 8300000, guid: e50ee437cebdcab4f89c1946d3a4d978, type: 3}
 --- !u!114 &1062492580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1753,7 +1841,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Sugar
   m_vulnerableEnemies: 04000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0000000001000000020000000300000005000000060000000700000008000000
+  sound: {fileID: 8300000, guid: d5417ad74c7c88845a6a57ab9e68fdc5, type: 3}
 --- !u!114 &1135566783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1890,6 +1979,7 @@ MonoBehaviour:
   m_name: Axe
   m_vulnerableEnemies: 040000000500000006000000
   m_resistantEnemies: 
+  sound: {fileID: 8300000, guid: 38d9bae4ba37260469461a202bb577fe, type: 3}
 --- !u!114 &1146221312
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2068,7 +2158,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Holy Water
   m_vulnerableEnemies: 000000000100000002000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 05000000060000000700000008000000
+  sound: {fileID: 8300000, guid: 143a64fe8cc806742bdfb3ba5f741fb4, type: 3}
 --- !u!114 &1258383412
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2255,8 +2346,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_name: Potted plant
-  m_vulnerableEnemies: 06000000
-  m_resistantEnemies: 
+  m_vulnerableEnemies: 0600000000000000
+  m_resistantEnemies: 040000000700000008000000
+  sound: {fileID: 8300000, guid: fd731a6472cfab34ca46d426499c0bbd, type: 3}
 --- !u!114 &1427942398
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2392,7 +2484,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Rubber Chicken
   m_vulnerableEnemies: 03000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0100000002000000
+  sound: {fileID: 8300000, guid: ef4126d14e6a98f41a0159d242f7dc41, type: 3}
 --- !u!114 &1452990726
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2628,6 +2721,7 @@ MonoBehaviour:
   m_name: Salt
   m_vulnerableEnemies: 0200000006000000
   m_resistantEnemies: 
+  sound: {fileID: 8300000, guid: e401fdd3f81183d4dad810b876032cfc, type: 3}
 --- !u!114 &1579910971
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2854,7 +2948,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Banana
   m_vulnerableEnemies: 0000000007000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0500000008000000
+  sound: {fileID: 8300000, guid: e85bf1868664f7540a898d950491da54, type: 3}
 --- !u!114 &1809583999
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2990,7 +3085,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Garlic
   m_vulnerableEnemies: 01000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0000000002000000030000000400000005000000060000000700000008000000
+  sound: {fileID: 8300000, guid: 5c0f9630a4c74784e83d7ebb133f3fa7, type: 3}
 --- !u!114 &1879981957
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3126,7 +3222,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Rice
   m_vulnerableEnemies: 04000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 00000000
+  sound: {fileID: 8300000, guid: 07432f30137eb964798cf5de7fe09809, type: 3}
 --- !u!114 &1891779513
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3262,7 +3359,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Toothbrush
   m_vulnerableEnemies: 04000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 0000000001000000020000000300000005000000060000000700000008000000
+  sound: {fileID: 8300000, guid: 41d339c55d4024f4bb1d66f61aec4442, type: 3}
 --- !u!114 &1897742933
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3582,6 +3680,7 @@ MonoBehaviour:
   m_name: Taco
   m_vulnerableEnemies: 0200000007000000
   m_resistantEnemies: 
+  sound: {fileID: 8300000, guid: e9d6ffb3e8a65a846a31a6721548cff5, type: 3}
 --- !u!114 &2054604024
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3717,7 +3816,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_name: Crucifix
   m_vulnerableEnemies: 0100000002000000
-  m_resistantEnemies: 
+  m_resistantEnemies: 05000000060000000700000008000000
+  sound: {fileID: 8300000, guid: d40f3108c59cf1447b120353632df18d, type: 3}
 --- !u!114 &2109357902
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3854,6 +3954,7 @@ MonoBehaviour:
   m_name: Sword
   m_vulnerableEnemies: 07000000
   m_resistantEnemies: 
+  sound: {fileID: 8300000, guid: 640da6331b0c3eb489b2d0152f76ccd0, type: 3}
 --- !u!114 &2133466617
 MonoBehaviour:
   m_ObjectHideFlags: 0

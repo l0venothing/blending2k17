@@ -16,6 +16,8 @@ public class InventoryItem : MonoBehaviour {
     //float m_vulnerabilityEfficiency;
     [SerializeField]
     List<Enemy.category> m_resistantEnemies;
+    [SerializeField]
+    AudioClip sound;
     //[SerializeField]
     //float m_resistanceEfficiency;
 
@@ -31,6 +33,7 @@ public class InventoryItem : MonoBehaviour {
 
     public void Use ()
     {
+        FightManager.singleton.PlaySound(sound);
         float damage = 1;
         Enemy enemy = FightManager.singleton.actualEnemy;
         if (m_vulnerableEnemies.Contains(enemy.monsterCategory))
