@@ -97,6 +97,9 @@ public class FightManager : MonoBehaviour {
                 case Enemy.category.Zombie:
                     newEnemy.gameObject.GetComponent<Image>().sprite = zombieSprite;
                     break;
+                case Enemy.category.Ent:
+                    newEnemy.gameObject.GetComponent<Image>().sprite = dryadSprite;
+                    break;
             }
             m_enemyPool.Add(newEnemy);
             newEnemy.gameObject.SetActive(false);
@@ -126,11 +129,6 @@ public class FightManager : MonoBehaviour {
         {
             StartCoroutine(PlayWhenPossible(heroDies));
         }
-        Destroy(actualEnemy.gameObject);
-        actualEnemy.gameObject.SetActive(false);
-        actualEnemy = null;
-        m_UIContainer.SetActive(false);
-        m_roomManager.SetActive(true);
     }
 
     public void TakeDamage (float damage)
@@ -150,11 +148,15 @@ public class FightManager : MonoBehaviour {
 
     IEnumerator PlayWhenPossible (AudioClip soundToPlay)
     {
-        while (m_player.isPlaying)
-        {
-            yield return null;
-        }
-        PlayWhenPossible(soundToPlay);
+        yield return new WaitForSeconds(2f);
+        PlayFightSound(soundToPlay);
+        yield return new WaitForSeconds(1f);
+        Destroy(actualEnemy.gameObject);
+        actualEnemy.gameObject.SetActive(false);
+        actualEnemy = null;
+        yield return new WaitForSeconds(2f);
+        m_UIContainer.SetActive(false);
+        m_roomManager.SetActive(true);
     }
 
     void Die ()
