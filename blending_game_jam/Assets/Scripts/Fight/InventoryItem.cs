@@ -33,19 +33,22 @@ public class InventoryItem : MonoBehaviour {
 
     public void Use ()
     {
-        float damage = 1;
-        Enemy enemy = FightManager.singleton.actualEnemy;
-        if (m_vulnerableEnemies.Contains(enemy.monsterCategory))
+        if (!FightManager.singleton.stoping)
         {
-            damage = 2;
+            float damage = 1;
+            Enemy enemy = FightManager.singleton.actualEnemy;
+            if (m_vulnerableEnemies.Contains(enemy.monsterCategory))
+            {
+                damage = 2;
+            }
+            else if (m_resistantEnemies.Contains(enemy.monsterCategory))
+            {
+                damage = 0;
+            }
+            enemy.TakeDamage(damage);
+            FightManager.singleton.PlayFightSound(sound);
+            Destroy(gameObject);
+            gameObject.SetActive(false);
         }
-        else if (m_resistantEnemies.Contains(enemy.monsterCategory))
-        {
-            damage = 0;
-        }
-        enemy.TakeDamage(damage);
-        FightManager.singleton.PlayFightSound(sound);
-        Destroy(gameObject);
-        gameObject.SetActive(false);
     }
 }

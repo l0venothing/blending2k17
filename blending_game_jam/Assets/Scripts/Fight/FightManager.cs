@@ -2,12 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class FightManager : MonoBehaviour {
 
     public static FightManager singleton;
 
     public Enemy actualEnemy;
+
+    public bool stoping = false;
 
     //[SerializeField]
     //GameObject m_modelContainer;
@@ -121,6 +124,7 @@ public class FightManager : MonoBehaviour {
 
     public void StopFight ()
     {
+        stoping = true;
         if (m_heroHP > 0)
         {
             StartCoroutine(PlayWhenPossible(monsterDies));
@@ -142,19 +146,25 @@ public class FightManager : MonoBehaviour {
 
     public void PlayFightSound (AudioClip soundToPlay)
     {
+        print(soundToPlay);
         m_player.clip = soundToPlay;
         m_player.Play();
     }
 
     IEnumerator PlayWhenPossible (AudioClip soundToPlay)
     {
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
         PlayFightSound(soundToPlay);
         yield return new WaitForSeconds(1f);
+        if (m_heroHP <= 0)
+        {
+            SceneManager.LoadScene("game_over");
+        }
         Destroy(actualEnemy.gameObject);
         actualEnemy.gameObject.SetActive(false);
         actualEnemy = null;
-        yield return new WaitForSeconds(2f);
+        yield return new WaitForSeconds(1f);
+        stoping = false;
         m_UIContainer.SetActive(false);
         m_roomManager.SetActive(true);
     }
