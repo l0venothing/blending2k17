@@ -28,15 +28,25 @@ public class GenerateRoom : MonoBehaviour {
         Vector3 pos = new Vector3(0, 0, 0);
         pos.x = number * 6f;
 
+        bool isAdoor = false;
+
 
 
         // load game object
         GameObject bg_gameobject;
 
         if(doors.Contains(number)){
+            if(origin == null && number == doors[0]){
+
+            bg_gameobject = Instantiate(Resources.Load("room_bg")) as GameObject;
+            }
+            else{
+
+            isAdoor = true;
             bg_gameobject = Instantiate(Resources.Load("room_door")) as GameObject;
             bg_gameobject.GetComponent<DoorManager>().parent = gameObject;
             doorsList.Add(bg_gameobject.GetComponent<DoorManager>());
+            }
         }
         else{
             bg_gameobject = Instantiate(Resources.Load("room_bg")) as GameObject;
@@ -51,6 +61,7 @@ public class GenerateRoom : MonoBehaviour {
 
         // load good sprites for bg
         string name = "room_bg_";
+
         if(doors.Contains(number)){
             if(doors[doors.Count -1] == number && doors.Count > 1){
                 name += "stair_";
@@ -73,7 +84,16 @@ public class GenerateRoom : MonoBehaviour {
             }
         }
         Sprite bgSprite;
-        bgSprite = Resources.Load<Sprite>(name + textureName);
+        name =  name + textureName;
+        if(!isAdoor){
+            int r = Random.Range(1, 6);
+            if(r > 3){
+                r = 1;
+            }
+            name += "_" +r;
+        }
+        print(name);
+        bgSprite = Resources.Load<Sprite>(name);
 
 
         Sprite borderSprite;
