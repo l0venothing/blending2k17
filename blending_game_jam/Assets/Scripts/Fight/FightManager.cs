@@ -53,6 +53,8 @@ public class FightManager : MonoBehaviour {
 
     List<Enemy> m_enemyPool = new List<Enemy>();
 
+    private int enemiesCount = 0;
+
     private void Start()
     {
         if (singleton == null)
@@ -71,6 +73,7 @@ public class FightManager : MonoBehaviour {
         Enemy model = m_enemyContainer.gameObject.GetComponentInChildren<Enemy>();
         foreach (InventoryItem item in items)
         {
+            enemiesCount++;
             Enemy newEnemy = Instantiate(model.gameObject).GetComponent<Enemy>();
             newEnemy.transform.SetParent(m_enemyContainer, false);
             newEnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
@@ -158,7 +161,7 @@ public class FightManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         if (m_heroHP <= 0)
         {
-            int score = m_enemyPool.Count + 1;
+            int score = enemiesCount - m_enemyPool.Count + 1;
             PlayerPrefs.SetInt("score", score);
             SceneManager.LoadScene("game_over");
         }

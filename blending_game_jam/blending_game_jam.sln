@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 2015
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blending_game_jam", "blending_game_jam.csproj", "{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}"
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blending_game_jam", "Assembly-CSharp.csproj", "{B87E0624-7F6D-3F27-8E82-438A3505E615}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
