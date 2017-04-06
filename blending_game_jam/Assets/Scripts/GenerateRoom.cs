@@ -137,6 +137,20 @@ public class GenerateRoom : MonoBehaviour {
 
         }
 
+        // wall
+        if(number==0){
+            Transform wall = bg_gameobject.transform.Find("wall_left");
+
+            if(wall != null)
+                wall.gameObject.SetActive(true);
+        }
+        if(number==length - 1){
+            Transform wall = bg_gameobject.transform.Find("wall_right");
+
+            if(wall != null)
+                wall.gameObject.SetActive(true);
+        }
+
     }
 
     // Update is called once per frame
