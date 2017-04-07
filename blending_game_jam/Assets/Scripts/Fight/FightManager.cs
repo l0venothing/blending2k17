@@ -67,6 +67,41 @@ public class FightManager : MonoBehaviour {
         m_UIContainer.SetActive(false);
     }
 
+    Enemy.category ChoseEnemyCat (List<Enemy.category> potentialCats)
+    {
+        if (potentialCats.Count == 1)
+        {
+            return potentialCats[0];
+        }
+        int leastPresentCatNumber = enemiesCount;
+        List<Enemy.category> minoritaries = new List<Enemy.category>();
+        foreach (Enemy.category catToCheck in potentialCats)
+        {
+            int presentCat = 0;
+            foreach (Enemy enemy in m_enemyPool)
+            {
+                if (enemy.monsterCategory == catToCheck)
+                {
+                    presentCat++;
+                }
+            }
+            if (presentCat < leastPresentCatNumber)
+            {
+                leastPresentCatNumber = presentCat;
+                minoritaries.Clear();
+            }
+            if (presentCat == leastPresentCatNumber)
+            {
+                minoritaries.Add(catToCheck);
+            }
+        }
+        if (minoritaries.Count == 1)
+        {
+            return minoritaries[0];
+        }
+        return minoritaries[Random.Range(0, minoritaries.Count)];
+    }
+
     public void GenerateEnemyPool ()
     {
         InventoryItem[] items = m_inventoryContainer.GetComponentsInChildren<InventoryItem>();
@@ -76,35 +111,44 @@ public class FightManager : MonoBehaviour {
             enemiesCount++;
             Enemy newEnemy = Instantiate(model.gameObject).GetComponent<Enemy>();
             newEnemy.transform.SetParent(m_enemyContainer, false);
-            newEnemy.monsterCategory = item.GetVulnerabilities()[Random.Range(0, item.GetVulnerabilities().Count)];
+            newEnemy.monsterCategory = ChoseEnemyCat(item.GetVulnerabilities());
             switch (newEnemy.monsterCategory)
             {
                 case Enemy.category.Lamia:
                     newEnemy.gameObject.GetComponent<Image>().sprite = lamiaSprite;
+                    newEnemy.gameObject.name = "Lamia";
                     break;
                 case Enemy.category.Fairy:
                     newEnemy.gameObject.GetComponent<Image>().sprite = fairySprite;
+                    newEnemy.gameObject.name = "Fairy";
                     break;
                 case Enemy.category.Demon:
                     newEnemy.gameObject.GetComponent<Image>().sprite = demonSprite;
+                    newEnemy.gameObject.name = "Demon";
                     break;
                 case Enemy.category.SpiderLady:
                     newEnemy.gameObject.GetComponent<Image>().sprite = spiderLadySprite;
+                    newEnemy.gameObject.name = "SpiderLady";
                     break;
                 case Enemy.category.Vampire:
                     newEnemy.gameObject.GetComponent<Image>().sprite = vampireSprite;
+                    newEnemy.gameObject.name = "Vampire";
                     break;
                 case Enemy.category.Werewolf:
                     newEnemy.gameObject.GetComponent<Image>().sprite = werewolfSprite;
+                    newEnemy.gameObject.name = "Werewolf";
                     break;
                 case Enemy.category.Minotaur:
                     newEnemy.gameObject.GetComponent<Image>().sprite = minotaurSprite;
+                    newEnemy.gameObject.name = "Minotaur";
                     break;
                 case Enemy.category.Zombie:
                     newEnemy.gameObject.GetComponent<Image>().sprite = zombieSprite;
+                    newEnemy.gameObject.name = "Zombie";
                     break;
                 case Enemy.category.Ent:
                     newEnemy.gameObject.GetComponent<Image>().sprite = dryadSprite;
+                    newEnemy.gameObject.name = "Dryad";
                     break;
             }
             m_enemyPool.Add(newEnemy);

@@ -1,7 +1,7 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blending_game_jam", "Assembly-CSharp.csproj", "{B87E0624-7F6D-3F27-8E82-438A3505E615}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2017
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "blending_game_jam", "blending_game_jam.csproj", "{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -9,15 +9,12 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{B87E0624-7F6D-3F27-8E82-438A3505E615}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{B87E0624-7F6D-3F27-8E82-438A3505E615}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{B87E0624-7F6D-3F27-8E82-438A3505E615}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{B87E0624-7F6D-3F27-8E82-438A3505E615}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97A7DEBB-FF03-E74F-3F7A-FB5E73D80F20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(MonoDevelopProperties) = preSolution
-		StartupItem = Assembly-CSharp.csproj
 	EndGlobalSection
 EndGlobal
