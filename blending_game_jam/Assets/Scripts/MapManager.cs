@@ -21,7 +21,6 @@ public class MapManager : MonoBehaviour {
                 roomsGenerated = AddRoom(index++);
             }
             else{
-                print(origin);
                 roomsGenerated = AddRoom(index++, origin);
             }
             _rooms -= roomsGenerated;

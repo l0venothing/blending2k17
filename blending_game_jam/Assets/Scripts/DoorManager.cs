@@ -24,7 +24,6 @@ public class DoorManager : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-        print(doorOpening);
         if(doorOpening)
         {
             if(fade_out){

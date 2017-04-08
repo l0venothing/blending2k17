@@ -92,7 +92,6 @@ public class GenerateRoom : MonoBehaviour {
             }
             name += "_" +r;
         }
-        print(name);
         bgSprite = Resources.Load<Sprite>(name);
 
 
