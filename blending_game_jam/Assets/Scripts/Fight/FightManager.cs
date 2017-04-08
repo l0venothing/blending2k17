@@ -11,10 +11,10 @@ public class FightManager : MonoBehaviour {
     public Enemy actualEnemy;
 
     public bool stoping = false;
-
-    //[SerializeField]
-    //GameObject m_modelContainer;
-    [SerializeField]
+    Animator anim;
+//[SerializeField]
+//GameObject m_modelContainer;
+[SerializeField]
     float m_heroHPMax = 3;
     float m_heroHP;
     [SerializeField]
@@ -112,6 +112,8 @@ public class FightManager : MonoBehaviour {
             Enemy newEnemy = Instantiate(model.gameObject).GetComponent<Enemy>();
             newEnemy.transform.SetParent(m_enemyContainer, false);
             newEnemy.monsterCategory = ChoseEnemyCat(item.GetVulnerabilities());
+             anim=newEnemy.gameObject.AddComponent<Animator>();
+            anim.runtimeAnimatorController = Resources.Load("monster") as RuntimeAnimatorController;
             switch (newEnemy.monsterCategory)
             {
                 case Enemy.category.Lamia:
@@ -166,6 +168,7 @@ public class FightManager : MonoBehaviour {
             actualEnemy = m_enemyPool[Random.Range(0, m_enemyPool.Count)];
             m_enemyPool.Remove(actualEnemy);
             actualEnemy.gameObject.SetActive(true);
+        
         }
     }
 

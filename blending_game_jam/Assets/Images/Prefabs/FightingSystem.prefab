@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114952224318758590}
   - component: {fileID: 114075293145930836}
   - component: {fileID: 114145373589363106}
+  - component: {fileID: 95431976665499306}
   m_Layer: 5
   m_Name: SilverSpoon
   m_TagString: Untagged
@@ -77,6 +78,7 @@ GameObject:
   - component: {fileID: 114688848421981166}
   - component: {fileID: 114897169114483838}
   - component: {fileID: 114733486850660398}
+  - component: {fileID: 95175491022224390}
   m_Layer: 5
   m_Name: Garlic
   m_TagString: Untagged
@@ -96,6 +98,7 @@ GameObject:
   - component: {fileID: 114567804327576758}
   - component: {fileID: 114161067519937040}
   - component: {fileID: 114831132354134058}
+  - component: {fileID: 95368619797137350}
   m_Layer: 5
   m_Name: Mirror
   m_TagString: Untagged
@@ -115,6 +118,7 @@ GameObject:
   - component: {fileID: 114517862200834352}
   - component: {fileID: 114296408551419212}
   - component: {fileID: 114443739915834318}
+  - component: {fileID: 95719526216390334}
   m_Layer: 5
   m_Name: Fish
   m_TagString: Untagged
@@ -134,6 +138,7 @@ GameObject:
   - component: {fileID: 114530507409598220}
   - component: {fileID: 114001818074282312}
   - component: {fileID: 114824714173857772}
+  - component: {fileID: 95511414302531130}
   m_Layer: 5
   m_Name: Taco
   m_TagString: Untagged
@@ -153,6 +158,7 @@ GameObject:
   - component: {fileID: 114327664455541980}
   - component: {fileID: 114863205843169708}
   - component: {fileID: 114368978959335976}
+  - component: {fileID: 95952564796227904}
   m_Layer: 5
   m_Name: PottedPlant
   m_TagString: Untagged
@@ -172,6 +178,7 @@ GameObject:
   - component: {fileID: 114930631465155492}
   - component: {fileID: 114698113818799186}
   - component: {fileID: 114113264206908460}
+  - component: {fileID: 95085811667678414}
   m_Layer: 5
   m_Name: Rice
   m_TagString: Untagged
@@ -191,6 +198,7 @@ GameObject:
   - component: {fileID: 114849765712639720}
   - component: {fileID: 114938777212892736}
   - component: {fileID: 114161165034453046}
+  - component: {fileID: 95076621456441192}
   m_Layer: 5
   m_Name: Axe
   m_TagString: Untagged
@@ -210,6 +218,7 @@ GameObject:
   - component: {fileID: 114251259051778150}
   - component: {fileID: 114246033313665956}
   - component: {fileID: 114565436695618576}
+  - component: {fileID: 95420846721016922}
   m_Layer: 5
   m_Name: Salt
   m_TagString: Untagged
@@ -229,6 +238,7 @@ GameObject:
   - component: {fileID: 114020771767522418}
   - component: {fileID: 114584745130505980}
   - component: {fileID: 114150359024058126}
+  - component: {fileID: 95603624967033874}
   m_Layer: 5
   m_Name: IronFork
   m_TagString: Untagged
@@ -248,6 +258,7 @@ GameObject:
   - component: {fileID: 114284047877670316}
   - component: {fileID: 114836367376763374}
   - component: {fileID: 114235823002251338}
+  - component: {fileID: 95543237422094070}
   m_Layer: 5
   m_Name: Cat
   m_TagString: Untagged
@@ -267,6 +278,7 @@ GameObject:
   - component: {fileID: 114610040114912656}
   - component: {fileID: 114993589033335130}
   - component: {fileID: 114839146017949948}
+  - component: {fileID: 95195248920791904}
   m_Layer: 5
   m_Name: Toothbrush
   m_TagString: Untagged
@@ -286,6 +298,7 @@ GameObject:
   - component: {fileID: 114666209558985270}
   - component: {fileID: 114596675202338742}
   - component: {fileID: 114778630666018158}
+  - component: {fileID: 95049843363332800}
   m_Layer: 5
   m_Name: Sugar
   m_TagString: Untagged
@@ -305,6 +318,7 @@ GameObject:
   - component: {fileID: 114661702838479264}
   - component: {fileID: 114308049088112600}
   - component: {fileID: 114464246698362672}
+  - component: {fileID: 95081293045073812}
   m_Layer: 5
   m_Name: Banana
   m_TagString: Untagged
@@ -324,6 +338,7 @@ GameObject:
   - component: {fileID: 114515216901752140}
   - component: {fileID: 114990250231020232}
   - component: {fileID: 114607723277193840}
+  - component: {fileID: 95496725187058370}
   m_Layer: 5
   m_Name: Sword
   m_TagString: Untagged
@@ -343,6 +358,7 @@ GameObject:
   - component: {fileID: 114271270803075442}
   - component: {fileID: 114659246825466852}
   - component: {fileID: 114151171829179720}
+  - component: {fileID: 95706747074714452}
   m_Layer: 5
   m_Name: Crucifix
   m_TagString: Untagged
@@ -379,6 +395,7 @@ GameObject:
   - component: {fileID: 114776218892305218}
   - component: {fileID: 114625113790598460}
   - component: {fileID: 114482043299590546}
+  - component: {fileID: 95443833669492724}
   m_Layer: 5
   m_Name: HolyWater
   m_TagString: Untagged
@@ -416,6 +433,7 @@ GameObject:
   - component: {fileID: 114933166282820974}
   - component: {fileID: 114011784167904870}
   - component: {fileID: 114698108849989340}
+  - component: {fileID: 95939332988012168}
   m_Layer: 5
   m_Name: RubberChicken
   m_TagString: Untagged
@@ -453,6 +471,7 @@ GameObject:
   - component: {fileID: 114140698647123866}
   - component: {fileID: 114067640529659810}
   - component: {fileID: 114038260072122914}
+  - component: {fileID: 95902984644325530}
   m_Layer: 5
   m_Name: Torch
   m_TagString: Untagged
@@ -522,6 +541,7 @@ GameObject:
   - component: {fileID: 114551596077369506}
   - component: {fileID: 114511314986496646}
   - component: {fileID: 114185631581944660}
+  - component: {fileID: 95614482100646974}
   m_Layer: 5
   m_Name: Stake
   m_TagString: Untagged
@@ -689,6 +709,346 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
+--- !u!95 &95049843363332800
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1524524753970026}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95076621456441192
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1317562058305948}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95081293045073812
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1597114654385442}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95085811667678414
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1309351646582066}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95175491022224390
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1127906076402066}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95195248920791904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1393644356707456}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95368619797137350
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1158076597654844}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95420846721016922
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1338945850586760}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95431976665499306
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1038330547055768}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95443833669492724
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1787003406558528}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95496725187058370
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1682470119062460}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95511414302531130
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1270118195625094}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95543237422094070
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1372037016240500}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95603624967033874
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1366450131209636}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95614482100646974
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1993144907928194}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95706747074714452
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1728790755750830}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95719526216390334
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1159297546168778}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95902984644325530
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944143979228926}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95939332988012168
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823622580783838}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+--- !u!95 &95952564796227904
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1289239677950314}
+  m_Enabled: 0
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: a9de7dd45e66f44499d25658748fbe8b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114001818074282312
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -700,6 +1060,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Taco
   m_vulnerableEnemies: 0200000007000000
   m_resistantEnemies: 
@@ -715,6 +1076,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Rubber Chicken
   m_vulnerableEnemies: 03000000
   m_resistantEnemies: 0100000002000000
@@ -809,6 +1171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Torch
   m_vulnerableEnemies: 0000000001000000030000000400000005000000060000000700000008000000
   m_resistantEnemies: 02000000
@@ -824,6 +1187,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Silver Spoon
   m_vulnerableEnemies: 0100000003000000
   m_resistantEnemies: 06000000
@@ -1074,6 +1438,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Mirror
   m_vulnerableEnemies: 010000000500000007000000
   m_resistantEnemies: 0000000004000000
@@ -1276,6 +1641,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Salt
   m_vulnerableEnemies: 0200000006000000
   m_resistantEnemies: 
@@ -1399,6 +1765,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Fish
   m_vulnerableEnemies: 0300000005000000
   m_resistantEnemies: 0400000006000000
@@ -1414,6 +1781,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Banana
   m_vulnerableEnemies: 0000000007000000
   m_resistantEnemies: 0500000008000000
@@ -1457,6 +1825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   actualEnemy: {fileID: 0}
+  stoping: 0
   m_heroHPMax: 3
   m_UIContainer: {fileID: 1979783643798204}
   m_inventoryContainer: {fileID: 1057288840381502}
@@ -1746,6 +2115,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Stake
   m_vulnerableEnemies: 010000000500000008000000
   m_resistantEnemies: 06000000
@@ -1948,6 +2318,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Iron Fork
   m_vulnerableEnemies: 0400000005000000
   m_resistantEnemies: 020000000600000008000000
@@ -1963,6 +2334,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Sugar
   m_vulnerableEnemies: 04000000
   m_resistantEnemies: 0000000001000000020000000300000005000000060000000700000008000000
@@ -2057,6 +2429,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Holy Water
   m_vulnerableEnemies: 000000000100000002000000
   m_resistantEnemies: 05000000060000000700000008000000
@@ -2072,6 +2445,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Crucifix
   m_vulnerableEnemies: 0100000002000000
   m_resistantEnemies: 05000000060000000700000008000000
@@ -2220,6 +2594,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Rice
   m_vulnerableEnemies: 04000000
   m_resistantEnemies: 00000000
@@ -2470,6 +2845,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Cat
   m_vulnerableEnemies: 0300000008000000
   m_resistantEnemies: 
@@ -2545,7 +2921,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_Sprite: {fileID: 21300000, guid: dbaeead37fb1017458a15d2357c6f540, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c8322eb9a30667948af4581e49868c61, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -2591,6 +2967,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Potted plant
   m_vulnerableEnemies: 0600000000000000
   m_resistantEnemies: 040000000700000008000000
@@ -2633,6 +3010,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Garlic
   m_vulnerableEnemies: 01000000
   m_resistantEnemies: 0000000002000000030000000400000005000000060000000700000008000000
@@ -2702,6 +3080,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Axe
   m_vulnerableEnemies: 040000000500000006000000
   m_resistantEnemies: 
@@ -2807,6 +3186,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Sword
   m_vulnerableEnemies: 07000000
   m_resistantEnemies: 
@@ -2822,6 +3202,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a0ceb8428455fa4438ccf86a79eeda03, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  fightUI: {fileID: 1979783643798204}
   m_name: Toothbrush
   m_vulnerableEnemies: 04000000
   m_resistantEnemies: 0000000001000000020000000300000005000000060000000700000008000000
@@ -3026,10 +3407,10 @@ RectTransform:
   m_Father: {fileID: 224438762696451606}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0}
-  m_AnchorMax: {x: 1, y: 0.4}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 0, y: 0}
+  m_AnchorMin: {x: 0.11000001, y: 0.043333337}
+  m_AnchorMax: {x: 1, y: 0.855}
+  m_AnchoredPosition: {x: 21, y: -119.5}
+  m_SizeDelta: {x: -308, y: -187}
   m_Pivot: {x: 1, y: 0.5}
 --- !u!224 &224143119883741034
 RectTransform:
@@ -3100,11 +3481,11 @@ RectTransform:
   m_Father: {fileID: 224932477642503796}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 1}
+  m_AnchorMin: {x: 0.09900001, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 0.000049591064}
-  m_SizeDelta: {x: 0, y: 0}
-  m_Pivot: {x: 0, y: 1}
+  m_AnchoredPosition: {x: -29.750648, y: -0.000045776367}
+  m_SizeDelta: {x: 38.093, y: 0}
+  m_Pivot: {x: 0.22548576, y: 0.69783527}
 --- !u!224 &224401012269340226
 RectTransform:
   m_ObjectHideFlags: 1
@@ -3166,13 +3547,13 @@ RectTransform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1787003406558528}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0.07845095, y: -0.0011328635, z: 0.014394388, w: 0.9968134}
+  m_LocalPosition: {x: 0, y: 0, z: 22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 224301050286994550}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9, y: 0, z: 1.6550001}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -3468,7 +3849,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 8, y: -8}
+  m_AnchoredPosition: {x: 8.000061, y: -8.000061}
   m_SizeDelta: {x: -16, y: -16}
   m_Pivot: {x: 0, y: 1}
 --- !u!224 &224936464117872452
