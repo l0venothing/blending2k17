@@ -9,12 +9,12 @@ public class ScoreManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
         victimNumber = PlayerPrefs.GetInt("score");
-    }
-	
-	
-	void Update () {
-      
         scoreText.text = "You killed : " + victimNumber + " Monsters";
+    }
+    
+    
+    void Update () {
+      
 		
 	}
 }
