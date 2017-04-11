@@ -9,6 +9,9 @@ public class PlayerController : MonoBehaviour
     public AudioSource audiosource;
 
     public Animator animator;
+    public AudioSource mainSound;
+    float t;
+    float fadeTime = 1;
     void Start()
     {
         audiosource=GetComponent<AudioSource>();
@@ -23,6 +26,11 @@ public class PlayerController : MonoBehaviour
             if (!audiosource.isPlaying)
             {
                 audiosource.Play();
+                t = fadeTime;
+                t -= Time.deltaTime;
+                mainSound.volume = t / fadeTime;
+                mainSound.volume = 0.3f;
+
             }
             animator.SetBool("iddle", false);
             GetComponent<SpriteRenderer>().flipX = false;
@@ -35,6 +43,10 @@ public class PlayerController : MonoBehaviour
             if (!audiosource.isPlaying)
             {
                 audiosource.Play();
+                t = fadeTime;
+                t-= Time.deltaTime;
+                mainSound.volume = t / fadeTime;
+                mainSound.volume = 0.3f;
             }
           
             animator.SetBool("iddle", false);
@@ -47,6 +59,7 @@ public class PlayerController : MonoBehaviour
             if (audiosource.isPlaying)
             {
                 audiosource.Stop();
+                mainSound.volume = 1f;
             }
 
 
