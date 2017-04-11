@@ -177,10 +177,13 @@ public class FightManager : MonoBehaviour {
         stoping = true;
         if (m_heroHP > 0)
         {
+            int score = PlayerPrefs.GetInt("score");
+            PlayerPrefs.SetInt("score", score + 1);
             StartCoroutine(PlayWhenPossible(monsterDies));
         }
         else
         {
+
             StartCoroutine(PlayWhenPossible(heroDies));
         }
     }
@@ -206,10 +209,9 @@ public class FightManager : MonoBehaviour {
         yield return new WaitForSeconds(1f);
         PlayFightSound(soundToPlay);
         yield return new WaitForSeconds(1f);
+
         if (m_heroHP <= 0)
         {
-            int score = enemiesCount - m_enemyPool.Count + 1;
-            PlayerPrefs.SetInt("score", score);
             SceneManager.LoadScene("game_over");
         }
         Destroy(actualEnemy.gameObject);

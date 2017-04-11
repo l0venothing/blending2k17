@@ -13,6 +13,7 @@ public class MapManager : MonoBehaviour {
 
     // Use this for initialization
     void Start () {
+        PlayerPrefs.SetInt("score", 0);
         int _rooms = rooms;
         int index = 0;
         while(_rooms > 0){

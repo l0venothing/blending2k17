@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class DoorManager : MonoBehaviour {
 
@@ -40,10 +41,15 @@ public class DoorManager : MonoBehaviour {
             }
             else if(!audio.isPlaying && !fade_in){
                 fade_in = true;
+                if(destination == null){
+                    SceneManager.LoadScene("victory");
+                }
+                else{
                 destination.parent.active = true;
                 Vector3 pos = player.transform.position;
                 pos.x =  destination.transform.position.x;
-                player.transform.position = pos;
+                player.transform.position = pos; 
+                }
             }
             else if(fade_in){
                 GameObject image = GameObject.FindGameObjectWithTag("Fade");
